@@ -12,9 +12,12 @@ class QuizViewModel: ViewModel(){
 
     private lateinit var currentWord: String
 
+    private lateinit var listOfWords: String
 
-    private fun pickRandomWord(): String{
-        currentWord = allWords.random()
-        return currentWord
+    private val getReady: String =  "get ready for some questions"
+
+     fun comingSoon(): String{
+         listOfWords = allWords.random()
+         return listOfWords
     }
 }
