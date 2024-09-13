@@ -11,6 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.quizme.presentation.HomeScreenLayout
+import com.example.quizme.presentation.QuizHomeScreen
+import com.example.quizme.presentation.QuizUiState
 import com.example.quizme.presentation.QuizViewModel
 import com.example.quizme.ui.theme.QuizMeTheme
 
@@ -24,9 +26,14 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    HomeScreenLayout(quizViewModel = QuizViewModel())
+                    QuizHomeScreen()
                 }
             }
         }
     }
+}
+@Preview(showBackground = true)
+@Composable
+fun QuizHomeScreenPreview(){
+    QuizHomeScreen()
 }

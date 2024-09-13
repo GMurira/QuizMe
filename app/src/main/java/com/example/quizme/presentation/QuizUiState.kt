@@ -1,6 +1,7 @@
 package com.example.quizme.presentation
 
-data class QuizUiState(
-    val currentWord: String = "",
-    val listOfWords: String = ""
-)
+ interface QuizUiState{
+    data class Success(val questions: String) :QuizUiState
+    object Error : QuizUiState
+    object Loading : QuizUiState
+}
